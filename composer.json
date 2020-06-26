@@ -1,0 +1,20 @@
+{
+    "name": "sergioccrr/datetimespanish",
+    "description": "Translate textual date representations into Spanish",
+    "keywords": ["datetime", "date", "spain", "spanish"],
+    "homepage": "https://github.com/sergioccrr/datetimespanish",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "5.6.0"
+    },
+    "authors": [
+        {
+            "name": "Sergio Cruz",
+            "email": "sergioccrr@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "": "src/" }
+    }
+}
