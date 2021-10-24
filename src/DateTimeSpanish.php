@@ -66,7 +66,7 @@ class DateTimeSpanish extends DateTime {
 	 * @return string
 	 */
 	public function format($format) : string {
-		$format = preg_replace_callback('#(?<!\\\\)[F|M|l|D]#', [$this, 'replace_textual'], $format);
+		$format = preg_replace_callback('#(?<!\\\\)[FMlD]#', [$this, 'replace_textual'], $format);
 		$str = parent::format($format);
 		return $str;
 	}
