@@ -37,11 +37,16 @@ class DateTimeSpanish extends DateTime {
 	];
 
 
+	/**
+	 *
+	 * @param array<int, string> $matches
+	 * @return string
+	 */
 	private function replace_textual(array $matches) : string {
 		$char  = $matches[0];
 		$isDay = ($char === 'l' || $char === 'D');
 
-		$key = parent::format($isDay ? 'N' : 'n') - 1;
+		$key = (int) parent::format($isDay ? 'N' : 'n') - 1;
 		$str = $isDay ? self::DAYS[$key] : self::MONTHS[$key];
 
 		if ($char === 'D' || $char === 'M') {
@@ -55,7 +60,11 @@ class DateTimeSpanish extends DateTime {
 	}
 
 
-
+	/**
+	 *
+	 * @param string $format
+	 * @return string
+	 */
 	public function format($format) : string {
 		$format = preg_replace_callback('#(?<!\\\\)[F|M|l|D]#', [$this, 'replace_textual'], $format);
 		$str = parent::format($format);
