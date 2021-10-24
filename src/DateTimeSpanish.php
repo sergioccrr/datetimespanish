@@ -39,7 +39,7 @@ class DateTimeSpanish extends DateTime {
 
 	/**
 	 *
-	 * @param array<int, string> $matches
+	 * @param string[] $matches
 	 * @return string
 	 */
 	private function replace_textual(array $matches) : string {

@@ -10,14 +10,14 @@ You can achieve this with the `setlocale` function, but it relies on you having 
 
 ### Example
 
-```
+```php
 <?php
 
-echo (new DateTimeSpanish)->setDate(2020, 1, 6)->format('l, d F Y') . PHP_EOL;
+echo (new DateTimeSpanish)->setDate(2020, 1, 6)->format('l, d F Y');
 // Return "Lunes, 06 Enero 2020"
 
 // Instead of:
 
-echo (new DateTime)->setDate(2020, 1, 6)->format('l, d F Y') . PHP_EOL;
+echo (new DateTime)->setDate(2020, 1, 6)->format('l, d F Y');
 // Return "Monday, 06 January 2020"
 ```
